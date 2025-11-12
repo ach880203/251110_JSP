@@ -34,7 +34,9 @@
 			<th>권한(1:관리자, 0:일반회원)</th>
 		</tr>
 
-		<%
+		<%  
+		
+		    try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");//드라이버 로드
 			conn = DriverManager.getConnection(url, uid, pass); //오라클 연결
 			
@@ -53,6 +55,14 @@
 				
 				out.println("</tr>");
 			}
+		    }catch(Exception e){
+		    	e.printStackTrace();
+		    }finally{
+		    	rs.close();
+		    	stmt.close();
+		    	conn.close();
+		    }
+		    
 			%>
 
 
