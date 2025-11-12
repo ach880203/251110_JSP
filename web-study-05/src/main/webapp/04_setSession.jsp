@@ -8,14 +8,15 @@
 </head>
 <body>
 
-
 <%
-     int count=0;
-	 out.println("count : ");
-	 out.println(++count);
-	 
-	 
-	 
+
+   session.setAttribute("id", "pinksung");
+   session.setAttribute("pwd", "test1234");
+   session.setAttribute("age", 20);
+
 %>
+
+<h3> 세션 설정</h3>
+
 </body>
 </html>
