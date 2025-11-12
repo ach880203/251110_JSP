@@ -41,6 +41,18 @@
 			stmt = conn.createStatement(); //sql 문장 오라클 전송
 			rs = stmt.executeQuery(sql); //sql 구문 실행
 			
+			while(rs.next()){
+				out.println("<tr>");
+				
+				out.println("<td>" +rs.getString("name") + "</td>");
+				out.println("<td>" +rs.getString("userid") + "</td>");
+				out.println("<td>" +rs.getString("pwd") + "</td>");
+				out.println("<td>" +rs.getString("email") + "</td>");
+				out.println("<td>" +rs.getString("phone") + "</td>");
+				out.println("<td>" +rs.getInt("admin") + "</td>");
+				
+				out.println("</tr>");
+			}
 			%>
 
 
