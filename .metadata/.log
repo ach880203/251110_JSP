@@ -1808,3 +1808,30 @@ Error: Debug Failure. Expected 2 <= 0
 
 !ENTRY org.eclipse.lsp4e 1 0 2025-11-13 14:41:46.182
 !MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-13 14:57:17.088
+!MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-11-13 14:57:39.154
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-11-13 14:57:39.155
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-11-13 14:57:39.156
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-11-13 14:57:39.156
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-11-13 14:57:39.159
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-11-13 14:57:39.160
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-13 15:47:44.598
+!MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-13 16:20:06.764
+!MESSAGE [Info]	ESLint server running in node v22.13.1

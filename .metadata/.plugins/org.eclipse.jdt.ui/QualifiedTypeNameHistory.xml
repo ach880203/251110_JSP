@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="org.apache.jasper.runtime.ProtectedFunctionMapper"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="com.saeyan.dto.MemberVO"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.saeyan.dao.MemberDAO"/>
 </qualifiedTypeNameHistroy>

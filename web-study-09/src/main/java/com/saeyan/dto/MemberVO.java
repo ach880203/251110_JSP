@@ -5,7 +5,7 @@ public class MemberVO {
 	private String name;
 	private String userid;
 	private String pwd;
-	private String emil;
+	private String email;
 	private String phone;
 	private int admin;
 	
@@ -28,11 +28,11 @@ public class MemberVO {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	public String getEmil() {
-		return emil;
+	public String getEmail() {
+		return email;
 	}
-	public void setEmil(String emil) {
-		this.emil = emil;
+	public void setEmil(String email) {
+		this.email = email;
 	}
 	public String getPhone() {
 		return phone;
@@ -49,7 +49,7 @@ public class MemberVO {
 	
 	@Override
 	public String toString() {
-		return "MemberVO [name=" + name + ", userid=" + userid + ", pwd=" + pwd + ", emil=" + emil + ", phone=" + phone
+		return "MemberVO [name=" + name + ", userid=" + userid + ", pwd=" + pwd + ", emil=" + email + ", phone=" + phone
 				+ ", admin=" + admin + "]";
 	}
 	 

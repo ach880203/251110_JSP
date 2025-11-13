@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.saeyan.dao.MemberDAO;
+
 @WebServlet("/Login.do")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -32,6 +34,14 @@ public class LoginServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		 String userid = request.getParameter("userid");
+		 String pwd = request.getParameter("pwd");
+		 
+		 MemberDAO mdao = MemberDAO.getInstance();
+		 
+		 boolean result =  mdao.userCheck(userid, pwd);
+		 
+		 System.out.println("result : " + result);
 	}
 
 }
