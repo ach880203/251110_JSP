@@ -58,19 +58,19 @@ public class MemberDAO {
 
 		try {
 
-			con = getConnection();//DB연결
-			pstmt = con.prepareStatement(sql);//sql 구문 전송.. sql 에러있니 없니 체크 
+			con = getConnection();// DB연결
+			pstmt = con.prepareStatement(sql);// sql 구문 전송.. sql 에러있니 없니 체크
 			pstmt.setString(1, userid);
-			
+
 			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-				//가져올 데이터 있니?
-				if(rs.getString("pwd") != null && rs.getString("pwd").equals(pwd)) {
-					 result=true;
+
+			if (rs.next()) {
+				// 가져올 데이터 있니?
+				if (rs.getString("pwd") != null && rs.getString("pwd").equals(pwd)) {
+					result = true;
 				}
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -86,31 +86,31 @@ public class MemberDAO {
 	}
 
 //아이디로 회원 정보 가져오는 메소드
-	public MemberVO getMember (String userid){
-		
-		MemberVO mvo = null;
-		String sql = "select* from member where userid = ?";
-		
+	public MemberVO getMember(String userid) {
+
+		MemberVO mvo = new MemberVO();
+		String sql = "select * from member where userid = ?";
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
 		try {
-			con = getConnection();//DB연결
-			pstmt = con.prepareStatement(sql);//sql 구문 전송.. sql 에러있니 없니 체크 
+			con = getConnection();// DB연결
+			pstmt = con.prepareStatement(sql);// sql 구문 전송.. sql 에러있니 없니 체크
 			pstmt.setString(1, userid);
-			
+
 			rs = pstmt.executeQuery();
-			
-			if(rs.next()) {
-					mvo.setName(rs.getString("name"));
-					mvo.setUserid(rs.getString("userid"));
-					mvo.setPwd(rs.getString("pwd"));
-					mvo.setEmil(rs.getString("email"));
-					mvo.setPhone(rs.getString("phone"));
-					mvo.setAdmin(rs.getInt("admin"));
-				}
-			
+
+			if (rs.next()) {
+				mvo.setName(rs.getString("name"));
+				mvo.setUserid(rs.getString("userid"));
+				mvo.setPwd(rs.getString("pwd"));
+				mvo.setEmail(rs.getString("email"));
+				mvo.setPhone(rs.getString("phone"));
+				mvo.setAdmin(rs.getInt("admin"));
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -119,10 +119,85 @@ public class MemberDAO {
 				pstmt.close();
 				con.close();
 			} catch (Exception e) {
-				e.printStackTrace();}
+				e.printStackTrace();
+			}
 		}
+
+		System.out.println("getMember : " + mvo);
 		return mvo;
 	}
-	
+
+	// ressult : -1 아디디사용 가능
+	// ressult : 1 아디디사용 불가능
+	public int confirmID(String userid) {
+
+		int result = -1;
+
+		String sql = "select userid from member where userid = ?";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+
+			con = getConnection();// DB연결
+			pstmt = con.prepareStatement(sql);// sql 구문 전송.. sql 에러있니 없니 체크
+			pstmt.setString(1, userid);
+
+			rs = pstmt.executeQuery(); // 가져올 데이터 있음?
+
+			if (rs.next()) {
+				result = 1;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+				con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		return result;
+
+	}// end confirmID
+
+	public int insertMember(MemberVO mvo) {
+
+		int result = -1;
+
+		String sql = "insert into member values(?,?,?,?,?,?)";
+		Connection con = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			con = getConnection();// DB연결
+			pstmt = con.prepareStatement(sql);// sql 구문 전송.. sql 에러있니 없니 체크
+			pstmt.setString(1, mvo.getName());
+			pstmt.setString(2, mvo.getUserid());
+			pstmt.setString(3, mvo.getPwd());
+			pstmt.setString(4, mvo.getEmail());
+			pstmt.setString(5, mvo.getPhone());
+			pstmt.setInt(6, mvo.getAdmin());
+
+			result = pstmt.executeUpdate(); // 가져올 데이터 있음?
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				con.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} // end finally
+
+		return result;
+	}// end insertMember
+
 }
-			

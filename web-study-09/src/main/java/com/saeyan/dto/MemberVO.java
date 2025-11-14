@@ -31,7 +31,7 @@ public class MemberVO {
 	public String getEmail() {
 		return email;
 	}
-	public void setEmil(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	public String getPhone() {
@@ -49,7 +49,7 @@ public class MemberVO {
 	
 	@Override
 	public String toString() {
-		return "MemberVO [name=" + name + ", userid=" + userid + ", pwd=" + pwd + ", emil=" + email + ", phone=" + phone
+		return "MemberVO [name=" + name + ", userid=" + userid + ", pwd=" + pwd + ", email=" + email + ", phone=" + phone
 				+ ", admin=" + admin + "]";
 	}
 	 
