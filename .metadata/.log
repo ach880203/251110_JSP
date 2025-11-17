@@ -2966,3 +2966,12 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.e4.core.co
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2025-11-17 16:49:55.171
 !MESSAGE Several ports (8005, 8080) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-17 18:26:29.392
+!MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-17 18:26:29.434
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.7.3 from path "D:\Dev\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.6.202502071606\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-17 18:26:29.441
+!MESSAGE [Info]	Typescript Server version info: {version=5.7.3, source=user-setting}
