@@ -65,6 +65,7 @@ public class ProductWriteServlet extends HttpServlet {
 	
 	pdao.insertProduct(vo);
 	
+	response.sendRedirect("ProductList.do");
 	}
 
 }

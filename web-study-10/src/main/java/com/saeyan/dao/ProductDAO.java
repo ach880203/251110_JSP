@@ -68,4 +68,40 @@ public class ProductDAO {
 	 }
 	 return list;
 }
+
+	public void insertProduct(ProductVO vo) {
+			
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String sql = "insert into product(name, price, pictureurl, description) "
+				+ "values(?, ?, ?, ?)";
+		
+		try {
+			//DB연결
+			con = DBManager.getConnection();
+			
+			//2.sql전송
+			pstmt = con.prepareStatement(sql);
+			
+			//3.sql맵핑
+			pstmt.setString(1, vo.getName());
+			pstmt.setInt(2, vo.getPrice());
+			pstmt.setString(3, vo.getPictureUrl());
+			pstmt.setString(4, vo.getDescription());
+			
+			//4. sql실행
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(con, pstmt);
+		}
+		
+		
+		
+		
+		
+		
+	}
 }
