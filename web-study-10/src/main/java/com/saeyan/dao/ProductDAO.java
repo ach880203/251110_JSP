@@ -32,8 +32,11 @@ public class ProductDAO {
 	 PreparedStatement pstmt = null;
 	 ResultSet rs = null;
 	 String sql = "select * from product order by code desc";
+	 
 	 List<ProductVO> list = new ArrayList<ProductVO>();
+	 
 	 ProductVO vo = null;
+	 
 	 
 	 try {
 		 //DB연결
