@@ -188,6 +188,37 @@ public class BoardDAO {
 		
 		return vo;
 	}
+
+	public void updateReadCount(int num) {
+		
+		Connection con = null;
+		PreparedStatement pstmt  = null;
+
+		String sql = "update board \n"
+				+ "set readcount = readcount+1\n"
+				+ "where num = ?";
+		
+
+		try {
+
+		    con = DBManager.getConnection();
+		    
+		    pstmt = con.prepareStatement(sql);
+		    
+		    pstmt.setInt(1, num);
+			
+			
+			//4. sql실행
+			pstmt.executeUpdate();
+		    
+
+		}catch(Exception e) {
+		    e.printStackTrace();
+		}finally {
+		    DBManager.close(con, pstmt);
+		}
+		
+	}
 	
 }
 	

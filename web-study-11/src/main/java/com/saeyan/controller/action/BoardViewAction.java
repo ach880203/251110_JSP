@@ -22,7 +22,11 @@ public class BoardViewAction implements Action {
 		BoardDAO dao = BoardDAO.getInstance();
 		BoardVO vo = dao.selectOneByNum(num);
 		
-		//3. 보드뷰값 전달하기
+		
+		//3.조회수 증가
+		dao.updateReadCount(num);
+		
+		//4. 보드뷰값 전달하기
 		request.setAttribute("board", vo);
 		
 		String url = "board/BoardView.jsp";

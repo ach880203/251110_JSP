@@ -1,9 +1,12 @@
 package com.saeyan.controller;
 
 import com.saeyan.controller.action.Action;
+import com.saeyan.controller.action.BoardDeleteAction;
 import com.saeyan.controller.action.BoardListAction;
 import com.saeyan.controller.action.BoardViewAction;
 import com.saeyan.controller.action.BoardWriteAction;
+import com.saeyan.controller.action.boardCheckAction;
+import com.saeyan.controller.action.boardCheckPassFormAction;
 
 public class ActionFactory {
 	
@@ -30,8 +33,13 @@ public class ActionFactory {
 			action = new BoardWriteAction();
 		}else if(command.equals("board_view")) {
 			action = new BoardViewAction();
+		}else if(command.equals("board_check_pass_form")) {
+			action = new boardCheckPassFormAction();
+		}else if(command.equals("board_check_pass")) {
+			action = new boardCheckAction();
+		}else if(command.equals("board_delete")) {
+			action = new BoardDeleteAction();
 		}
-		
 		return action;
 	}
 	}

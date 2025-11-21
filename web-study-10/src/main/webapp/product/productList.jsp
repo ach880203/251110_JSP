@@ -16,6 +16,7 @@
             <td colspan="5" style="border: white; text-align: right"><a
                href="productWrite.do">상품 등록</a></td>
          </tr>
+         
          <tr>
             <th>번호</th>
             <th>이름</th>
