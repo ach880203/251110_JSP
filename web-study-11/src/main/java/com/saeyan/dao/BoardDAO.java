@@ -219,6 +219,70 @@ public class BoardDAO {
 		}
 		
 	}
+
+	public void deleteBoard(int num) {
+
+		
+		Connection con = null;
+		PreparedStatement pstmt  = null;
+
+		String sql = "delete from board\n"
+				+ "where num = ?";
+		
+
+		try {
+
+		    con = DBManager.getConnection();
+		    
+		    pstmt = con.prepareStatement(sql);
+		    
+		    pstmt.setInt(1, num);
+			
+			
+			//4. sql실행
+			pstmt.executeUpdate();
+		    
+
+		}catch(Exception e) {
+		    e.printStackTrace();
+		}finally {
+		    DBManager.close(con, pstmt);
+		}
+	}
+
+	public void updateBoard(BoardVO vo) {
+	
+		Connection con = null;
+		PreparedStatement pstmt  = null;
+
+		String sql = "update board set name=?, pass=?, email=?, title=?, content=? where num=?";
+		
+
+		try {
+
+		    con = DBManager.getConnection();
+		    
+		    pstmt = con.prepareStatement(sql);
+		    
+		    pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getPass());
+			pstmt.setString(3, vo.getEmail());
+			pstmt.setString(4, vo.getTitle());
+			pstmt.setString(5, vo.getContent());
+			pstmt.setInt(6, vo.getNum());
+			
+			//4. sql실행
+			pstmt.executeUpdate();
+		    
+
+		}catch(Exception e) {
+		    e.printStackTrace();
+		}finally {
+		    DBManager.close(con, pstmt);
+		}
+		
+		
+	}
 	
 }
 	

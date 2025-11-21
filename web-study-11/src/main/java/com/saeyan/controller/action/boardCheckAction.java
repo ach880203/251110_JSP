@@ -39,5 +39,5 @@ public class boardCheckAction implements Action {
 		
 		
 	}
-
+    
 }

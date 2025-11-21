@@ -28,6 +28,8 @@
       window.opener.parent.location.href = 
             "BoardServlet?command=board_delete&num=${param.num}";
    }
+    
+    window.close();
 
 </script>
 

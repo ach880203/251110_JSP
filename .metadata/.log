@@ -3290,3 +3290,21 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.wst.server.core 4 0 2025-11-21 11:09:48.639
 !MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-21 12:12:28.994
+!MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-21 12:12:29.031
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.7.3 from path "D:\Dev\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.6.202502071606\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-21 12:12:29.033
+!MESSAGE [Info]	Typescript Server version info: {version=5.7.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-21 12:34:14.310
+!MESSAGE [Info]	ESLint server running in node v22.13.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-21 12:34:14.347
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.7.3 from path "D:\Dev\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.6.202502071606\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-11-21 12:34:14.350
+!MESSAGE [Info]	Typescript Server version info: {version=5.7.3, source=user-setting}
